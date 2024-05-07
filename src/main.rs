@@ -34,7 +34,7 @@ impl ArifPay {
         println!("{:?}", payment_info);
 
         let client = reqwest::Client::new();
-        let res = client.post("https://gateway.arifpay.org/api/sandbox/checkout/session")
+        let res = client.post("https://gateway.arifpay.net/api/checkout/session")
         .header("Content-Type", "application/json")
         .header("x-arifpay-key", &self.api_key)
         .json(&payment_info)
